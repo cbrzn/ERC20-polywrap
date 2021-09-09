@@ -1,0 +1,14 @@
+mutation increaseAllowance(
+  $address: String!,
+  $spender: String!,
+  $addedValue: BigInt!
+) {
+  increaseAllowance(
+    connection: {
+      networkNameOrChainId: $network
+    }
+    address: $address
+    spender: $spender
+    addedValue: $addedValue
+  )
+}

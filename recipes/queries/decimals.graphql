@@ -1,0 +1,8 @@
+query decimals($address: String!) {
+  decimals(
+    connection: {
+      networkNameOrChainId: $network
+    }
+    address: $address
+  )
+}

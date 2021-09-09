@@ -1,0 +1,39 @@
+#import { Mutation, Connection } into Ethereum from "w3://ens/ethereum.web3api.eth"
+
+type Mutation {
+  transfer(
+    connection: Ethereum_Connection
+    address: String!
+    recipient: String!
+    amount: BigInt!
+  ): Ethereum_TxResponse!
+
+  approve(
+    connection: Ethereum_Connection
+    address: String!
+    spender: String!
+    amount: BigInt!
+  ): Ethereum_TxResponse!
+
+  transferFrom(
+    connection: Ethereum_Connection
+    address: String!
+    sender: String!
+    recipient: String!
+    amount: BigInt!
+  ): Ethereum_TxResponse!
+
+  increaseAllowance(
+    connection: Ethereum_Connection
+    address: String!
+    spender: String!
+    addedValue: BigInt!
+  ): Ethereum_TxResponse!
+
+  decreaseAllowance(
+    connection: Ethereum_Connection
+    address: String!
+    spender: String!
+    subtractedValue: BigInt!
+  ): Ethereum_TxResponse!
+}

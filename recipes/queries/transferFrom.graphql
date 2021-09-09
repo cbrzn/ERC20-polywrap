@@ -1,0 +1,16 @@
+mutation transferFrom(
+  $address: String!,
+  $sender: String!,
+  $recipient: String!,
+  $amount: BigInt!
+) {
+  transferFrom(
+    connection: {
+      networkNameOrChainId: $network
+    }
+    address: $address
+    sender: $sender
+    recipient: $recipient
+    amount: $amount
+  )
+}

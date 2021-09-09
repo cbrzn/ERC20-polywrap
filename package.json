@@ -1,0 +1,31 @@
+{
+  "name": "templates-api-assemblyscript",
+  "description": "Web3API Assemblyscript Template",
+  "private": true,
+  "version": "0.0.1-prealpha.40",
+  "scripts": {
+    "build": "yarn build:contract && yarn build:web3api",
+    "build:web3api": "npx w3 build",
+    "build:contract": "hardhat compile",
+    "test:env:up": "npx w3 test-env up",
+    "test:env:down": "npx w3 test-env down",
+    "deploy": "yarn deploy:contract && yarn deploy:web3api",
+    "deploy:web3api": "npx w3 build --ipfs http://localhost:5001 --test-ens erc20.eth",
+    "deploy:contract": "hardhat run ./scripts/deploy.js",
+    "test": "npx w3 query ./recipes/e2e.json"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "@openzeppelin/contracts": "^4.3.1",
+    "@web3api/cli": "0.0.1-prealpha.40",
+    "@web3api/ethereum-plugin-js": "0.0.1-prealpha.40",
+    "@web3api/wasm-as": "0.0.1-prealpha.40",
+    "assemblyscript": "0.19.1",
+    "ethereum-waffle": "^3.4.0",
+    "ethers": "5.0.7",
+    "hardhat": "^2.6.3",
+    "solc": "0.8.3"
+  },
+  "dependencies": {}
+}
