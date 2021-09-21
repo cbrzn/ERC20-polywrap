@@ -18,8 +18,7 @@ async function main() {
     JSON.stringify(constants)
   )
   console.log("Wrote addresses to recipes/constants")
-  console.log("Done :D")
-  console.log(await erc20.name())
+  console.log("Done ✨")
 }
 
 main()

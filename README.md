@@ -1,5 +1,7 @@
-# SimpleStorage Demo Web3API
-A simple starter template that uses a SimpleStorage.sol contract ethereum. For more information on how this project works, and a step by step on how to extend its behavior, see the documentation [here](https://docs.web3api.dev/developers/create-as-web3api).
+# Generic ERC20 Polywrap
+Interact with any ERC20 token on any EVM-compatible chain via Polywrap client.
+
+For more information on how this project works, and a step by step on how to extend its behavior, see the documentation [here](https://docs.web3api.dev/developers/create-as-web3api).
 
 # How To Run
 
@@ -14,4 +16,6 @@ A simple starter template that uses a SimpleStorage.sol contract ethereum. For m
 `yarn deploy`  
 
 ## Run Test Query Recipe
-`yarn test`  
+`yarn test` for Polywrap's builtin testing framework
+
+`npx jest` for jest
