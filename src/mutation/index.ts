@@ -5,8 +5,20 @@ import {
   Input_approve,
   Input_transferFrom,
   Input_increaseAllowance,
-  Input_decreaseAllowance
+  Input_decreaseAllowance,
+  Input_deployToken
 } from "./w3";
+
+import { abi, bytecode } from "../../contracts/ERC20";
+
+export function deployToken(input: Input_deployToken): string {
+  return Ethereum_Mutation.deployContract({
+    abi ,
+    bytecode,
+    args: [input.name, input.symbol],
+    connection: input.connection
+  })
+}
 
 export function transfer(input: Input_transfer): Ethereum_TxResponse {
   return Ethereum_Mutation.callContractMethod({

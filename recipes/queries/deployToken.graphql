@@ -1,0 +1,7 @@
+mutation deployToken($network: String!) {
+  deployToken(
+    connection: {
+      networkNameOrChainId: $network
+    }
+  )
+}

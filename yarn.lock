@@ -554,7 +554,7 @@
   dependencies:
     "@ethersproject/bytes" "^5.4.0"
 
-"@ethersproject/basex@5.4.0", "@ethersproject/basex@^5.0.3", "@ethersproject/basex@^5.4.0":
+"@ethersproject/basex@5.4.0", "@ethersproject/basex@^5.0.0", "@ethersproject/basex@^5.0.3", "@ethersproject/basex@^5.4.0":
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/@ethersproject/basex/-/basex-5.4.0.tgz#0a2da0f4e76c504a94f2b21d3161ed9438c7f8a6"
   integrity sha512-J07+QCVJ7np2bcpxydFVf/CuYo9mZ7T73Pe7KQY4c1lRlrixMeblauMxHXD0MPwFmUHZIILDNViVkykFBZylbg==
@@ -1677,7 +1677,7 @@
     rimraf "3.0.2"
     ws "7.3.1"
 
-"@web3api/client-js@0.0.1-prealpha.44", "@web3api/client-js@^0.0.1-prealpha.44":
+"@web3api/client-js@0.0.1-prealpha.44":
   version "0.0.1-prealpha.44"
   resolved "https://registry.yarnpkg.com/@web3api/client-js/-/client-js-0.0.1-prealpha.44.tgz#70004f0cbc3d394dab31aa0c4b0b3e8f1e1c40af"
   integrity sha512-nxcX8Mez88ab0kkmogkHdW2aGbZaeFD8yaJpi4RAI88RJkPvZj6G1lcIohGc8ZeiG6vm8CNlK1EQHDMXuGA5vQ==
@@ -1718,7 +1718,7 @@
     jsonschema "1.4.0"
     semver "7.3.5"
 
-"@web3api/ens-plugin-js@0.0.1-prealpha.44", "@web3api/ens-plugin-js@^0.0.1-prealpha.44":
+"@web3api/ens-plugin-js@0.0.1-prealpha.44":
   version "0.0.1-prealpha.44"
   resolved "https://registry.yarnpkg.com/@web3api/ens-plugin-js/-/ens-plugin-js-0.0.1-prealpha.44.tgz#5d50e3589146b6436b5828136458684de0477e35"
   integrity sha512-xtNce82qmc+joMtzmc60iGZQjwVRmgrlX5dzh9X+OMaoRuPEcR8rD4sBmrWC6WZaMS4oGtWg/hwZP1OST02egA==
@@ -1727,7 +1727,7 @@
     "@web3api/core-js" "0.0.1-prealpha.44"
     ethers "5.0.7"
 
-"@web3api/ethereum-plugin-js@0.0.1-prealpha.44", "@web3api/ethereum-plugin-js@^0.0.1-prealpha.44":
+"@web3api/ethereum-plugin-js@0.0.1-prealpha.44":
   version "0.0.1-prealpha.44"
   resolved "https://registry.yarnpkg.com/@web3api/ethereum-plugin-js/-/ethereum-plugin-js-0.0.1-prealpha.44.tgz#7a133d58ef87e0f50448bbbc4c31b86a33f75ee6"
   integrity sha512-DT6wQn/ZLKhNmRJ1q+rsVpAGgVaNMgDhLqc6ynONfj3TWrJ+DjeDPdG8KPwmuf4KLMFHTfhhOz6RIb9D/Ltm+w==
@@ -1745,7 +1745,7 @@
     "@web3api/core-js" "0.0.1-prealpha.44"
     axios "0.21.1"
 
-"@web3api/ipfs-plugin-js@0.0.1-prealpha.44", "@web3api/ipfs-plugin-js@^0.0.1-prealpha.44":
+"@web3api/ipfs-plugin-js@0.0.1-prealpha.44":
   version "0.0.1-prealpha.44"
   resolved "https://registry.yarnpkg.com/@web3api/ipfs-plugin-js/-/ipfs-plugin-js-0.0.1-prealpha.44.tgz#53e6e69e47754fcdc127692621d76cd705159b8b"
   integrity sha512-t3c3FG+FXvltQ5P2zyR1A4Toc0ipRM3t6vl/PKGRC8sOnPOgIorDHHA63LOMXCjU0TQNu/MUQi6ur1mtMPWkRQ==
@@ -4790,6 +4790,42 @@ ethers@5.0.7:
     "@ethersproject/abstract-signer" "^5.0.0"
     "@ethersproject/address" "^5.0.0"
     "@ethersproject/base64" "^5.0.0"
+    "@ethersproject/bignumber" "^5.0.0"
+    "@ethersproject/bytes" "^5.0.0"
+    "@ethersproject/constants" "^5.0.0"
+    "@ethersproject/contracts" "^5.0.0"
+    "@ethersproject/hash" "^5.0.0"
+    "@ethersproject/hdnode" "^5.0.0"
+    "@ethersproject/json-wallets" "^5.0.0"
+    "@ethersproject/keccak256" "^5.0.0"
+    "@ethersproject/logger" "^5.0.0"
+    "@ethersproject/networks" "^5.0.0"
+    "@ethersproject/pbkdf2" "^5.0.0"
+    "@ethersproject/properties" "^5.0.0"
+    "@ethersproject/providers" "^5.0.0"
+    "@ethersproject/random" "^5.0.0"
+    "@ethersproject/rlp" "^5.0.0"
+    "@ethersproject/sha2" "^5.0.0"
+    "@ethersproject/signing-key" "^5.0.0"
+    "@ethersproject/solidity" "^5.0.0"
+    "@ethersproject/strings" "^5.0.0"
+    "@ethersproject/transactions" "^5.0.0"
+    "@ethersproject/units" "^5.0.0"
+    "@ethersproject/wallet" "^5.0.0"
+    "@ethersproject/web" "^5.0.0"
+    "@ethersproject/wordlists" "^5.0.0"
+
+ethers@5.0.8:
+  version "5.0.8"
+  resolved "https://registry.yarnpkg.com/ethers/-/ethers-5.0.8.tgz#c13d0fdf5e66db8085e2036d3309ed2f8a17ed89"
+  integrity sha512-of/rPgJ7E3yyBADUv5A7Gtkd7EB8ta/T9NS5CCG9tj9cifnXcI3KIdYQ7d8AS+9vm38pR1g6S5I+Q/mRnlQZlg==
+  dependencies:
+    "@ethersproject/abi" "^5.0.0"
+    "@ethersproject/abstract-provider" "^5.0.0"
+    "@ethersproject/abstract-signer" "^5.0.0"
+    "@ethersproject/address" "^5.0.0"
+    "@ethersproject/base64" "^5.0.0"
+    "@ethersproject/basex" "^5.0.0"
     "@ethersproject/bignumber" "^5.0.0"
     "@ethersproject/bytes" "^5.0.0"
     "@ethersproject/constants" "^5.0.0"
