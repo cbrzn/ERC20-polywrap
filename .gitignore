@@ -4,3 +4,5 @@ artifacts
 cache
 w3
 .w3
+contracts/ERC20.json
+contracts/ERC20.ts
