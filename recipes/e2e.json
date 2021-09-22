@@ -18,6 +18,13 @@
     }
   },
   {
+    "query": "./queries/decimals.graphql",
+    "variables": {
+      "network": "testnet",
+      "address": "$Erc20Addr"
+    }
+  },
+  {
     "query": "./queries/totalSupply.graphql",
     "variables": {
       "network": "testnet",
@@ -25,12 +32,19 @@
     }
   },
   {
-    "query": "./queries/approve.graphql",
+    "query": "./queries/balanceOf.graphql",
     "variables": {
       "network": "testnet",
       "address": "$Erc20Addr",
-      "spender": "$address1",
-      "amount": "100000000000"
+      "account": "$address0"
+    }
+  },
+  {
+    "query": "./queries/balanceOf.graphql",
+    "variables": {
+      "network": "testnet",
+      "address": "$Erc20Addr",
+      "account": "$address1"
     }
   },
   {
@@ -43,12 +57,39 @@
     }
   },
   {
-    "query": "./queries/decreaseAllowance.graphql",
+    "query": "./mutations/approve.graphql",
     "variables": {
       "network": "testnet",
       "address": "$Erc20Addr",
       "spender": "$address1",
-      "subtractedValue": "50000000000"
+      "amount": "$amount"
+    }
+  },
+  {
+    "query": "./mutations/increaseAllowance.graphql",
+    "variables": {
+      "network": "testnet",
+      "address": "$Erc20Addr",
+      "spender": "$address1",
+      "addedValue": "1000000000"
+    }
+  },
+  {
+    "query": "./mutations/decreaseAllowance.graphql",
+    "variables": {
+      "network": "testnet",
+      "address": "$Erc20Addr",
+      "spender": "$address1",
+      "subtractedValue": "1000000000"
+    }
+  },
+  {
+    "query": "./mutations/transfer.graphql",
+    "variables": {
+      "network": "testnet",
+      "address": "$Erc20Addr",
+      "recipient": "$address1",
+      "amount": "$amount"
     }
   }
 ]

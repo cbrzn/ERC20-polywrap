@@ -10,23 +10,21 @@ import {
 import { BigInt } from '@web3api/wasm-as'
 
 export function name(input: Input_name): string {
-  const res = Ethereum_Query.callContractView({
+  return Ethereum_Query.callContractView({
     connection: input.connection,
     address: input.address,
     method: "function name() public view returns (string memory)",
     args: null
   })
-  return res as string
 }
 
 export function symbol(input: Input_symbol): string {
-  const res = Ethereum_Query.callContractView({
+  return Ethereum_Query.callContractView({
     connection: input.connection,
     address: input.address,
     method: "function symbol() public view returns (string memory)",
     args: null
   })
-  return res as string
 }
 
 export function decimals(input: Input_decimals): i32 {
