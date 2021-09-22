@@ -6,7 +6,7 @@ For more information on how this project works, and a step by step on how to ext
 # How To Run
 
 ## Install Dependencies
-`nvm install && nvm use`  
+`nvm install && nvm use`
 `yarn`  
 
 ## Start Test Environment
@@ -16,6 +16,4 @@ For more information on how this project works, and a step by step on how to ext
 `yarn deploy`  
 
 ## Run Test Query Recipe
-`yarn test` for Polywrap's builtin testing framework
-
-`npx jest` for jest
+`yarn test` for Polywrap's builtin testing framework + jest to cover gaps
