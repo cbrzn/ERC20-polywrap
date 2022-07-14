@@ -6,7 +6,7 @@ async function main() {
   const erc20 = await ERC20Mintable.deploy("TST", "Test Token")
   console.log("ERC20 deployed to:", erc20.address)
   let constants = JSON.parse(
-    fs.readFileSync('./recipes/constants.json', { encoding: 'utf8' } )
+    fs.readFileSync('./constants.json', { encoding: 'utf8' } )
   )
   constants = {}
   constants['Erc20Addr'] = erc20.address
@@ -20,10 +20,10 @@ async function main() {
     console.log(`Minted ${amount} to ${address}`)
   }
   fs.writeFileSync(
-    './recipes/constants.json',
+    './constants.json',
     JSON.stringify(constants)
   )
-  console.log("Wrote addresses and amount to recipes/constants")
+  console.log("Wrote addresses and amount to constants")
   console.log("Done ✨")
 }
 

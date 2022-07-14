@@ -1,34 +1,30 @@
 {
-  "name": "templates-api-assemblyscript",
-  "description": "Web3API Assemblyscript Template",
+  "name": "erc20-wrapper",
+  "description": "Polywrap ERC20 Wrapper",
   "private": true,
-  "version": "0.0.1-prealpha.44",
+  "version": "0.1.0",
   "scripts": {
-    "build": "yarn build:contract && yarn build:web3api",
-    "build:web3api": "npx w3 build",
+    "build": "yarn build:contract && yarn build:polywrap",
+    "build:polywrap": "polywrap build",
     "build:contract": "hardhat compile",
-    "test:env:up": "npx w3 test-env up",
-    "test:env:down": "npx w3 test-env down",
-    "deploy": "yarn deploy:contract && yarn deploy:web3api",
-    "deploy:web3api": "npx w3 build --ipfs http://localhost:5001 --test-ens erc20.eth",
+    "test:env:up": "polywrap infra up --modules=eth-ens-ipfs",
+    "test:env:down": "polywrap infra down --modules=eth-ens-ipfs",
+    "deploy": "yarn deploy:contract && yarn deploy:polywrap",
+    "deploy:polywrap": "polywrap deploy",
     "deploy:contract": "hardhat run ./scripts/deploy.js --network localhost",
-    "test": "npx w3 query ./recipes/e2e.json && jest"
+    "test": "jest"
   },
   "devDependencies": {
-    "@nomiclabs/hardhat-ethers": "^2.0.2",
-    "@nomiclabs/hardhat-waffle": "^2.0.1",
-    "@openzeppelin/contracts": "^4.3.1",
-    "@web3api/cli": "0.0.1-prealpha.44",
-    "@web3api/client-js": "^0.0.1-prealpha.44",
-    "@web3api/ens-plugin-js": "^0.0.1-prealpha.44",
-    "@web3api/ethereum-plugin-js": "^0.0.1-prealpha.44",
-    "@web3api/ipfs-plugin-js": "^0.0.1-prealpha.44",
-    "@web3api/wasm-as": "0.0.1-prealpha.44",
+    "@nomiclabs/hardhat-ethers": "2.0.2",
+    "@nomiclabs/hardhat-waffle": "2.0.1",
+    "@openzeppelin/contracts": "4.3.1",
+    "polywrap": "0.2.0",
+    "@polywrap/client-js": "0.2.0",
+    "@polywrap/wasm-as": "0.2.0",
     "assemblyscript": "0.19.1",
     "ethers": "5.0.7",
-    "hardhat": "^2.6.3",
-    "jest": "^27.2.1",
+    "hardhat": "2.6.3",
+    "jest": "27.2.1",
     "solc": "0.8.3"
-  },
-  "dependencies": {}
+  }
 }

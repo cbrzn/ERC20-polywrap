@@ -1,8 +1,0 @@
-query totalSupply($address: String!) {
-  totalSupply(
-    connection: {
-      networkNameOrChainId: $network
-    }
-    address: $address
-  )
-}

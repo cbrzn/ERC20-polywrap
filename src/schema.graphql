@@ -1,6 +1,39 @@
-#import { Mutation, Connection } into Ethereum from "w3://ens/ethereum.web3api.eth"
+#import { Module, Connection } into Ethereum from "wrap://ens/ethereum.polywrap.eth"
 
-type Mutation {
+type Module {
+  name(
+    connection: Ethereum_Connection,
+    address: String!
+  ): String!
+
+  symbol(
+    connection: Ethereum_Connection,
+    address: String!
+  ): String!
+
+  decimals(
+    connection: Ethereum_Connection,
+    address: String!
+  ): Int!
+
+  totalSupply(
+    connection: Ethereum_Connection,
+    address: String!
+  ): BigInt!
+
+  balanceOf(
+    connection: Ethereum_Connection,
+    address: String!
+    account: String!
+  ): BigInt!
+
+  allowance(
+    connection: Ethereum_Connection,
+    address: String!
+    owner: String!
+    spender: String!
+  ): BigInt!
+
   transfer(
     connection: Ethereum_Connection
     address: String!

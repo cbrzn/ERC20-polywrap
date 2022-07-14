@@ -1,8 +1,10 @@
+// TODO: update this with latest changes
+
 const { ethers } = require("ethers")
-const { Web3ApiClient } = require("@web3api/client-js")
-const { ensPlugin } = require("@web3api/ens-plugin-js")
-const { ethereumPlugin } = require("@web3api/ethereum-plugin-js")
-const { ipfsPlugin } = require("@web3api/ipfs-plugin-js")
+const { PolywrapClient } = require("@polywrap/client-js")
+const { ensResolverPlugin } = require("@polywrap/ens-plugin-js")
+const { ethereumPlugin } = require("@polywrap/ethereum-plugin-js")
+const { ipfsResolverPlugin } = require("@polywrap/ipfs-resolver-plugin-js")
 const axios = require("axios")
 
 /**
@@ -13,27 +15,27 @@ const axios = require("axios")
  * today.
  */
 
-const constants = require("../recipes/constants.json")
+const constants = require("../constants.json")
 const erc20artifact = require("../artifacts/contracts/ERC20Mintable.sol/ERC20Mintable.json")
 
 async function getClient(signer) {
   signerAddress = await signer.getAddress()
-  return new Web3ApiClient({
+  return new PolywrapClient({
     plugins: [
       {
-        uri: "/ens/ens.web3api.eth",
-        plugin: ensPlugin({
+        uri: "/ens/ens-resolver.polywrap.eth",
+        plugin: ensResolverPlugin({
             addresses: { testnet: ensAddress }
         })
       },
       {
-        uri: "/ens/ipfs.web3api.eth",
-        plugin: ipfsPlugin({
+        uri: "/ens/ipfs-resolver.polywrap.eth",
+        plugin: ipfsResolverPlugin({
           provider: ipfs
         }),
       },
       {
-        uri: "/ens/ethereum.web3api.eth",
+        uri: "/ens/ethereum.polywrap.eth",
         plugin: ethereumPlugin({
           networks: {
             testnet: {
