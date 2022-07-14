@@ -2,5 +2,6 @@ format: 0.1.0
 name: erc20-wrapper
 language: wasm/assemblyscript
 build: ./polywrap.build.yaml
+deploy: ./polywrap.deploy.yaml
 schema: ./src/schema.graphql
 module: ./src/index.ts
